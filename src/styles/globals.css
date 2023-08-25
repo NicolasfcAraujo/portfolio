@@ -1,0 +1,59 @@
+@import url('https://fonts.cdnfonts.com/css/ostrich-sans-black');               
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: "Ostrich Sans Black", sans-serif;
+}
+
+.linkedin :hover{
+  transition: 0.3s;
+  color: #0077B7;
+}
+
+.github :hover{
+  transition: 0.3s;
+  color: #1B1F23;
+}
+
+.btnDown{
+  transition: 1s;
+}
+
+@keyframes showButton {
+  0% {
+    right: -80px;
+  }
+
+  100%{
+    right: 0;
+  }
+}
+
+@keyframes hideButton {
+  0% {
+    right: 0;
+  }
+
+  100%{
+    right: -80px;
+  }
+}
+
+.showBtn {
+  animation-name: showButton;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.hideBtn {
+  animation-name: hideButton;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
