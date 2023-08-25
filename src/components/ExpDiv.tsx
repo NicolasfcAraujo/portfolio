@@ -13,7 +13,7 @@ type ExpProps = {
 
 const ExpDiv = (props: ExpProps) => {
 
-  const [ width, setWidth ] = useState<number>(300)
+  const [ width, setWidth ] = useState<number>(280)
 
   const handleWidth = () => {
     setWidth(window.innerWidth - 128)
