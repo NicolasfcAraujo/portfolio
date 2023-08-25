@@ -23,7 +23,7 @@ export const params = [
       { gridColumnStart: 1, gridColumnEnd: 4, gridRowStart: 5, gridRowEnd: 7 },
       { gridColumnStart: 4, gridColumnEnd: 5, gridRowStart: 5, gridRowEnd: 7 },
     ],
-    [1.3]
+    [1.5]
   ],
   [
     [320],
@@ -31,11 +31,11 @@ export const params = [
       { gridColumnStart: 1, gridColumnEnd: 3, gridRowStart: 1, gridRowEnd: 3 },
       { gridColumnStart: 3, gridColumnEnd: 5, gridRowStart: 1, gridRowEnd: 3 },
       { gridColumnStart: 1, gridColumnEnd: 2, gridRowStart: 3, gridRowEnd: 5 },
-      { gridColumnStart: 2, gridColumnEnd: 3, gridRowStart: 3, gridRowEnd: 5 },
       { gridColumnStart: 3, gridColumnEnd: 5, gridRowStart: 3, gridRowEnd: 5 },
+      { gridColumnStart: 2, gridColumnEnd: 3, gridRowStart: 3, gridRowEnd: 5 },
       { gridColumnStart: 1, gridColumnEnd: 3, gridRowStart: 5, gridRowEnd: 7 },
       { gridColumnStart: 3, gridColumnEnd: 5, gridRowStart: 5, gridRowEnd: 7 },
     ],
-    [1.75]
+    [2]
   ]
 ]
