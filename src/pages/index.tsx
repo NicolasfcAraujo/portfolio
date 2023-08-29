@@ -115,7 +115,7 @@ export default function Home() {
           <a href="https://github.com/NicolasfcAraujo" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
             <i className="fa-brands fa-github"></i>
           </a>
-          <a href="nicolas-araujo_CV.pdf" download={"nicolas-araujo_CV"} className=" mx-8 github">
+          <a href="nicolas-araujo_CV.pdf" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
             <i className="fa-solid fa-file"></i>
           </a>
         </div>
