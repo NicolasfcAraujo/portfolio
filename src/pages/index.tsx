@@ -84,7 +84,7 @@ export default function Home() {
           <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>Red Balloons Studios🎈 <span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Frontend Developer (feb. 2022 - present)</span></h1>
           <ExpDiv
             title="Red Balloons Studios"
-            description="Webpage for Red Balloons Studios, an indie studio in Recife-PE. Brazil."
+            description="Built this responsive webpage for company arts showcase."
             image="redballoonsstudios.jpg"
             width={params[widthType][0][0] as number}
             padding="pb-16"
@@ -94,7 +94,7 @@ export default function Home() {
           />
           <ExpDiv
             title="Red Balloons Store"
-            description="Red Balloons Store is an art store based in Brazil created by artist “Edmar Junior” where he specialized in high quality 3D modeling and 2D arts in different styles for his projects and entertainment."
+            description="Planned and Built this complete ecommerce"
             image="redballoonsstore.jpg"
             width={params[widthType][0][0] as number}
             padding=""
