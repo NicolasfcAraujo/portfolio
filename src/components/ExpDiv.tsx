@@ -22,18 +22,20 @@ const ExpDiv = (props: ExpProps) => {
   }
 
   const handleScroll = () => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setShow(true)
-        }
+    if (ref.current) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShow(true)
+          }
+        })
       })
-    })
-
-    observer.observe(ref.current)
-
-    return () => {
-      observer.disconnect()
+  
+      observer.observe(ref.current)
+  
+      return () => {
+        observer.disconnect()
+      }
     }
   }
 
