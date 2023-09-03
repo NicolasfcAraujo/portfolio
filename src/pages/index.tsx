@@ -112,7 +112,7 @@ export default function Home() {
           <div className="text-center">
             I started programming with competitive robotics championships, then transitioned into web development, specializing in creating dynamic, user-centric web experiences. I'm a fast learner and a great team partner!
           </div>
-          <div className=" flex justify-center items-center text-5xl" style={{ height: `${ widthType == 2 ? `calc(50vh - 28px - ${64 * 3}px)` : `calc(100vh - 28px - ${64 * 3}px)` }` }}>
+          <div className=" flex justify-center items-center text-5xl" style={{ height: `${ widthType == 2 ? "calc(50vh - 28px - 192px)" : "calc(100vh - 28px - 192px)" }` }}>
             <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
               <i className="fa-brands fa-linkedin"></i>
             </a>
