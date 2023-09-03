@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <main className=" p-16">
-      <a href="#" className={` w-20 h-12 bg-black text-white flex justify-start pl-4 items-center text-2xl fixed bottom-16 ${ isBtnHidden ? "hideBtn" : "showBtn" }`}>
+      <a href="#" className={` w-20 h-12 bg-black text-white flex justify-start pl-4 items-center text-2xl fixed bottom-16 z-50 ${ isBtnHidden ? "hideBtn" : "showBtn" }`}>
         <i className="fa-solid fa-up-long"></i>
       </a>
       <section className=" flex flex-col justify-between" style={{height: `calc(100vh - 128px)`}}>
