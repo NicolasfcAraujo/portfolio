@@ -77,3 +77,22 @@ html {
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
+
+@keyframes toTechnologies {
+  0%{
+    position: relative;
+    top: -4px;
+  }
+
+  100%{
+    position: relative;
+    top: 4px
+  }
+}
+
+.to-technologies {
+  animation-name: toTechnologies;
+  animation-duration: 1.3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}

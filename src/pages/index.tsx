@@ -57,9 +57,9 @@ export default function Home() {
           <h1 className={` ${titleSize}`}>ARAUJO</h1>
           <h4 className=" text-lg">Frontend Developer</h4>
         </div>
-        <div className={` flex justify-center btnDown ${isBtnHidden ? "" : " text-white"}`}>
+        <a href="#technologies" className={` flex justify-center btnDown to-technologies ${isBtnHidden ? "" : " text-white"}`}>
           <i className="fa-solid fa-chevron-down"></i>
-        </div>
+        </a>
       </section>
       <section id="technologies" style={{ height: `calc(100vh - 64px)` }}>
         <div className=" pb-16 pt-16">
@@ -108,16 +108,21 @@ export default function Home() {
         <div className=" pb-16 pt-16">
           <h4 className=" text-lg">about me</h4>
         </div>
-        <div className=" flex justify-center items-center text-5xl" style={{ height: `calc(100vh - 28px - ${64 * 3}px)` }}>
-          <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/NicolasfcAraujo" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
-            <i className="fa-brands fa-github"></i>
-          </a>
-          <a href="nicolas-araujo_CV.pdf" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
-            <i className="fa-solid fa-file"></i>
-          </a>
+        <div className={` grid justify-around items-center ${widthType == 2 ? " grid-cols-1 grid-rows-2" : " grid-cols-2 grid-rows-1"}`}>
+          <div className="text-center">
+            I started programming with competitive robotics championships, then transitioned into web development, specializing in creating dynamic, user-centric web experiences. I'm a fast learner and a great team partner!
+          </div>
+          <div className=" flex justify-center items-center text-5xl" style={{ height: `${ widthType == 2 ? `calc(50vh - 28px - ${64 * 3}px)` : `calc(100vh - 28px - ${64 * 3}px)` }` }}>
+            <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/NicolasfcAraujo" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="nicolas-araujo_CV.pdf" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
+              <i className="fa-solid fa-file"></i>
+            </a>
+          </div>
         </div>
       </section>
     </main>
