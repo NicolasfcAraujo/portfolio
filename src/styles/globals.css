@@ -57,3 +57,23 @@ html {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
+@keyframes expShow {
+  0%{
+    position: relative;
+    top: 100px;
+    filter: opacity(0);
+  }
+
+  100% {
+    position: relative;
+    top: 0;
+    filter: opacity(1);
+  }
+}
+
+.exp-show{
+  animation-name: expShow;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}

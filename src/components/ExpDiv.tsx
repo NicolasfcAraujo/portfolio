@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type ExpProps = {
   title: string,
@@ -14,18 +14,37 @@ type ExpProps = {
 const ExpDiv = (props: ExpProps) => {
 
   const [ width, setWidth ] = useState<number>(280)
+  const [ show, setShow ] = useState<boolean>(false)
+  const ref = useRef(null)
 
   const handleWidth = () => {
     setWidth(window.innerWidth - 128)
   }
 
+  const handleScroll = () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setShow(true)
+        }
+      })
+    })
+
+    observer.observe(ref.current)
+
+    return () => {
+      observer.disconnect()
+    }
+  }
+
   useEffect(() => {
     handleWidth()
+    handleScroll()
     window.addEventListener("resize", handleWidth)
   }, [])
 
   return (
-    <div className={`${props.padding}`}>
+    <div ref={ref} className={`${props.padding} ${show ? "exp-show": ""}`}>
       <h2 className=" text-2xl pb-2">{props.title}</h2>
       <div className={` grid ${props.widthType == 2 ? " grid-cols-1" : " grid-cols-2"}`}>
         <a href={`${props.url}`} target="_blank" rel="noopener noreferrer" className=" w-fit">

@@ -50,7 +50,7 @@ export default function Home() {
             <ul className=" flex text-lg">
               <li><a href="#technologies" className="mr-8">technologies</a></li>
               <li><a href="#portfolio" className="mr-8">portfolio</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li><a href="#aboutme">about me</a></li>
             </ul>
           </nav>
           <h1 className={` ${titleSize}`}>NÍCOLAS</h1>
@@ -104,9 +104,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="contact" style={{ minHeight: `calc(100vh - 64px)` }}>
+      <section id="aboutme" style={{ minHeight: `calc(100vh - 64px)` }}>
         <div className=" pb-16 pt-16">
-          <h4 className=" text-lg">contact</h4>
+          <h4 className=" text-lg">about me</h4>
         </div>
         <div className=" flex justify-center items-center text-5xl" style={{ height: `calc(100vh - 28px - ${64 * 3}px)` }}>
           <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
