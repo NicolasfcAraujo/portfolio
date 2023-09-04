@@ -55,7 +55,7 @@ export default function Home() {
           </nav>
           <h1 className={` ${titleSize}`}>NÍCOLAS</h1>
           <h1 className={` ${titleSize}`}>ARAUJO</h1>
-          <h4 className=" text-lg">Frontend Developer</h4>
+          <h4 className=" text-lg">Web Developer</h4>
         </div>
         <a href="#technologies" className={` flex justify-center btnDown to-technologies ${isBtnHidden ? "" : " text-white"}`}>
           <i className="fa-solid fa-chevron-down"></i>
