@@ -62,9 +62,9 @@ const ExpDiv = (props: ExpProps) => {
         </a>
         <div className={` ${props.widthType == 2 ? " pt-4" : ""} `}>
           {props.description}
-          {props.githubLinks.map((link) => {
+          {props.githubLinks.map((link, index) => {
             return (
-              <div className=" text-sm">
+              <div key={index} className=" text-sm">
                 <span>{link.title}: </span>
                 <span className=" text-blue-500 underline"><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></span>
               </div>
