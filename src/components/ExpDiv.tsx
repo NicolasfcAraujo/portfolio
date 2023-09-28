@@ -8,7 +8,8 @@ type ExpProps = {
   padding: string,
   url: string,
   tecImages: string[],
-  widthType: number
+  widthType: number,
+  githubLinks: { title: string, link: string }[]
 }
 
 const ExpDiv = (props: ExpProps) => {
@@ -61,19 +62,32 @@ const ExpDiv = (props: ExpProps) => {
         </a>
         <div className={` ${props.widthType == 2 ? " pt-4" : ""} `}>
           {props.description}
-            <div>
-              technologies:
-            </div>
-            <div className={` ${props.widthType == 2 ? " grid grid-cols-4 gap-y-4 place-items-center" : " flex pt-4"} pt-4`}>
-              {props.tecImages.map((link, index) => {
-                return (
-                  <img key={index} className={`h-10 mx-2 saturate-0 hover:saturate-100`} src={link} alt={link.split(".")[0]}/>
-                )
-              })}
-            </div>
+          {props.githubLinks.map((link) => {
+            return (
+              <div className=" text-sm">
+                <span>{link.title}: </span>
+                <span className=" text-blue-500 underline"><a href={link.link} target="_blank" rel="noopener noreferrer">{link.link}</a></span>
+              </div>
+            )
+          })}
+          <div>
+            technologies:
+          </div>
+          <div className={` ${props.widthType == 2 ? " grid grid-cols-4 gap-y-4 place-items-center" : " flex pt-4"} pt-4`}>
+            {props.tecImages.map((link, index) => {
+              return (
+                <img key={index} className={`h-10 mx-2 saturate-0 hover:saturate-100`} src={link} alt={link.split(".")[0]}/>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
   )
 }
+
+ExpDiv.defaultProps = {
+  githubLinks: []
+}
+
 export default ExpDiv

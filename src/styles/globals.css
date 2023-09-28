@@ -19,7 +19,7 @@ html {
 
 .github :hover{
   transition: 0.3s;
-  color: #1B1F23;
+  color: #3a4753;
 }
 
 .btnDown{
@@ -95,4 +95,44 @@ html {
   animation-duration: 1.3s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+}
+
+@keyframes titleAnimationRight {
+  0% {
+    position: relative;
+    right: 120px;
+    filter: opacity(0);
+  }
+
+  100% {
+    position: relative;
+    right: 0px;
+    filter: opacity(1);
+  }
+}
+
+.title-animation-right {
+  animation-name: titleAnimationRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes titleAnimationLeft {
+  0% {
+    position: relative;
+    left: 120px;
+    filter: opacity(0);
+  }
+
+  100% {
+    position: relative;
+    left: 0px;
+    filter: opacity(1);
+  }
+}
+
+.title-animation-left {
+  animation-name: titleAnimationLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }

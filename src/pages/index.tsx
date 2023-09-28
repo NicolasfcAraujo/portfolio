@@ -1,7 +1,7 @@
 import ExpDiv from "@/components/ExpDiv";
 import TechArticle from "@/components/TechArticle";
 import { params } from "@/utils/params";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
 
@@ -53,8 +53,8 @@ export default function Home() {
               <li><a href="#aboutme">about me</a></li>
             </ul>
           </nav>
-          <h1 className={` ${titleSize}`}>NÍCOLAS</h1>
-          <h1 className={` ${titleSize}`}>ARAUJO</h1>
+          <h1 className={` ${titleSize} title-animation-right`}>NÍCOLAS</h1>
+          <h1 className={` ${titleSize} title-animation-left`}>ARAUJO</h1>
           <h4 className=" text-lg">Web Developer</h4>
         </div>
         <a href="#technologies" className={` flex justify-center btnDown to-technologies ${isBtnHidden ? "" : " text-white"}`}>
@@ -97,10 +97,25 @@ export default function Home() {
             description="Planned and Built this complete ecommerce"
             image="redballoonsstore.jpg"
             width={params[widthType][0][0] as number}
-            padding=""
+            padding="pb-20"
             url="https://redballoonsstore.shop"
             tecImages={["nextjsicon.svg", "typescript.png", "nodejs.png", "graphql.png", "tailwindicon.svg"]}
             widthType={widthType}
+          />
+          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>LightREF💡<span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
+          <ExpDiv
+            title="LightREF - Social Network"
+            description="A social notwork for fast messages, built with React.js, Node.js and SocketIO"
+            image="lightrefsocial.jpg"
+            width={params[widthType][0][0] as number}
+            padding=""
+            url="https://lightref-social.vercel.app"
+            tecImages={["reactjs.png","nodejs.png","tailwindicon.svg", "socketio.png"]}
+            widthType={widthType}
+            githubLinks={[
+              { title: "client", link: "https://github.com/NicolasfcAraujo/social-network-client-v1" },
+              { title: "server", link: "https://github.com/NicolasfcAraujo/social-network-server-v1"  }
+            ]}
           />
         </div>
       </section>
