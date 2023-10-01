@@ -108,7 +108,7 @@ export default function Home() {
             description="A social notwork for fast messages, built with React.js, Node.js and SocketIO"
             image="lightrefsocial.jpg"
             width={params[widthType][0][0] as number}
-            padding=""
+            padding="pb-20"
             url="https://lightref-social.vercel.app"
             tecImages={["reactjs.png","nodejs.png","tailwindicon.svg", "socketio.png"]}
             widthType={widthType}
@@ -116,6 +116,16 @@ export default function Home() {
               { title: "client", link: "https://github.com/NicolasfcAraujo/social-network-client-v1" },
               { title: "server", link: "https://github.com/NicolasfcAraujo/social-network-server-v1"  }
             ]}
+          />
+          <ExpDiv
+            title="LightREF"
+            description="LightREF is a display where you put images from internet just dragging and dropping, as references to help with art development and check documents "
+            image="lightref.jpg"
+            width={params[widthType][0][0] as number}
+            padding=""
+            url="https://lightref.com"
+            tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
+            widthType={widthType}
           />
         </div>
       </section>
@@ -134,7 +144,7 @@ export default function Home() {
             <a href="https://github.com/NicolasfcAraujo" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
               <i className="fa-brands fa-github"></i>
             </a>
-            <a href="nicolas-araujo_CV.pdf" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
+            <a href="nicolas_araujo-cv.pdf" target="_blank" rel="noopener noreferrer" className=" mx-8 github">
               <i className="fa-solid fa-file"></i>
             </a>
           </div>
