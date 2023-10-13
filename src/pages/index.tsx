@@ -81,50 +81,37 @@ export default function Home() {
           <h4 className=" text-lg">portfolio</h4>
         </div>
         <div>
-          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>Red Balloons Studios🎈 <span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Frontend Developer (feb. 2022 - present)</span></h1>
+          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8 flex items-center`}>LightREF☀️<span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
           <ExpDiv
-            title="Red Balloons Studios"
-            description="Built this responsive webpage for company arts showcase."
-            image="redballoonsstudios.jpg"
+            title="LightREF"
+            description="LightREF is the place to effortlessly store your references. Simply drag and drop images or GIFs in your browser and access them from anywhere. I designed the project, integrate it with the server and
+            deployed it"
+            image="lightref.jpg"
             width={params[widthType][0][0] as number}
-            padding="pb-16"
-            url="https://redballoonsstudios.com"
-            tecImages={["reactjs.png", "javascript.png", "nodejs.png"]}
+            padding="pb-20"
+            url="https://lightref.com/about"
+            tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
             widthType={widthType}
           />
+          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>Red Balloons Studios🎈 <span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Frontend Developer (feb. 2022 - present)</span></h1>
           <ExpDiv
             title="Red Balloons Store"
             description="Planned and Built this complete ecommerce"
             image="redballoonsstore.jpg"
             width={params[widthType][0][0] as number}
-            padding="pb-20"
+            padding="pb-16"
             url="https://redballoonsstore.shop"
             tecImages={["nextjsicon.svg", "typescript.png", "nodejs.png", "graphql.png", "tailwindicon.svg"]}
             widthType={widthType}
           />
-          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>LightREF💡<span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
           <ExpDiv
-            title="LightREF - Social Network"
-            description="A social notwork for fast messages, built with React.js, Node.js and SocketIO"
-            image="lightrefsocial.jpg"
-            width={params[widthType][0][0] as number}
-            padding="pb-20"
-            url="https://lightref-social.vercel.app"
-            tecImages={["reactjs.png","nodejs.png","tailwindicon.svg", "socketio.png"]}
-            widthType={widthType}
-            githubLinks={[
-              { title: "client", link: "https://github.com/NicolasfcAraujo/social-network-client-v1" },
-              { title: "server", link: "https://github.com/NicolasfcAraujo/social-network-server-v1"  }
-            ]}
-          />
-          <ExpDiv
-            title="LightREF"
-            description="LightREF is a display where you put images from internet just dragging and dropping, as references to help with art development and check documents "
-            image="lightref.jpg"
+            title="Red Balloons Studios"
+            description="Built this responsive webpage for company arts showcase."
+            image="redballoonsstudios.jpg"
             width={params[widthType][0][0] as number}
             padding=""
-            url="https://lightref.com"
-            tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
+            url="https://redballoonsstudios.com"
+            tecImages={["reactjs.png", "javascript.png", "nodejs.png"]}
             widthType={widthType}
           />
         </div>
