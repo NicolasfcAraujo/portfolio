@@ -78,7 +78,7 @@ export default function Home() {
             <h4 className=" text-lg">technologies</h4>
           </div>
 
-          <div className=" flex whitespace-nowrap h-24 techAnimation overflow-x-hidden">
+          <div className=" flex whitespace-nowrap h-24 techAnimation overflow-x-hidden mb-16">
             <Technologies animationClass="primary"/>
             <Technologies animationClass="primary"/>
           </div>
