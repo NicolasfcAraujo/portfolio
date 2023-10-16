@@ -1,6 +1,7 @@
 import ExpDiv from "@/components/ExpDiv";
-import TechArticle from "@/components/TechArticle";
+import Technologies from "@/components/Technologies";
 import { params } from "@/utils/params";
+import { useScroll, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -8,6 +9,12 @@ export default function Home() {
   const [ isBtnHidden, setIsBtnHidden ] = useState<boolean>(true)
   const [ widthType, setWidthType ] = useState< 0 | 1 | 2 >(0)
   const [ titleSize, setTitleSize ] = useState< "text-9xl" | "text-8xl" | "text-7xl" >("text-9xl")
+  const [ leftMove, setLeftMove ] = useState<number>()
+  const techRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: techRef,
+    offset: ["end end", "start start"]
+  })
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -39,6 +46,10 @@ export default function Home() {
     window.addEventListener("resize", () => handleWidthType())
   }, [])
 
+  useEffect(() => {
+    scrollYProgress.on("change", v => setLeftMove(v))
+  }, [scrollYProgress])
+
   return (
     <main className=" p-16">
       <a href="#" className={` w-20 h-12 bg-black text-white flex justify-start pl-4 items-center text-2xl fixed bottom-16 z-50 ${ isBtnHidden ? "hideBtn" : "showBtn" }`}>
@@ -61,6 +72,19 @@ export default function Home() {
           <i className="fa-solid fa-chevron-down"></i>
         </a>
       </section>
+      <section ref={techRef} id="technologies" style={{ height: `calc(60vh - 64px)` }}>
+        <div className=" sticky top-0'">
+          <div className=" pb-16 pt-16">
+            <h4 className=" text-lg">technologies</h4>
+          </div>
+
+          <div className=" flex whitespace-nowrap h-24 techAnimation overflow-x-hidden">
+            <Technologies animationClass="primary"/>
+            <Technologies animationClass="primary"/>
+          </div>
+        </div>
+      </section>
+      {/*
       <section id="technologies" style={{ height: `calc(100vh - 64px)` }}>
         <div className=" pb-16 pt-16">
           <h4 className=" text-lg">technologies</h4>
@@ -76,6 +100,7 @@ export default function Home() {
           <TechArticle color="rgb(243 244 246)" image="tailwind.svg" imageSize={params[widthType][2][0] as number} link="https://tailwindcss.com" name="test" style={params[widthType][1][6] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
         </div>
       </section>
+      */}
       <section id="portfolio" style={{ minHeight: `calc(100vh - 64px)` }}>
         <div className=" pb-16 pt-16">
           <h4 className=" text-lg">portfolio</h4>
@@ -88,7 +113,7 @@ export default function Home() {
             deployed it"
             image="lightref.jpg"
             width={params[widthType][0][0] as number}
-            padding="pb-20"
+            padding="pb-28"
             url="https://lightref.com/about"
             tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
             widthType={widthType}
