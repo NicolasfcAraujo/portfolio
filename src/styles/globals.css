@@ -136,3 +136,22 @@ html {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
+/*=================TECHNOLOGIES*/
+
+.primary {
+  animation: 12s primary infinite linear;
+}
+/*add later
+.techAnimation:hover .primary {
+  animation-play-state: paused;
+}
+*/
+@keyframes primary {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
