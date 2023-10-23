@@ -147,7 +147,7 @@ export default function Home() {
         </div>
         <div className={` grid justify-around items-center ${widthType == 2 ? " grid-cols-1 grid-rows-2" : " grid-cols-2 grid-rows-1"}`}>
           <div className="text-center">
-            Detail-oriented Front End Developer with 3 years of web development, specializing in creating dynamic, user-centric web experiences. Expertise includes React.js, Next.js, TypeScript, JavaScript (ES6+), Node.js, and GraphQL. Proficient in independent and collaborative projects, with a strong focus on landing page and website development.
+            Detail-oriented Front End Developer with 2 years of web development, specializing in creating dynamic, user-centric web experiences. Expertise includes React.js, Next.js, TypeScript, JavaScript (ES6+), Node.js, and GraphQL. Proficient in independent and collaborative projects, with a strong focus on landing page and website development.
           </div>
           <div className=" flex justify-center items-center text-5xl" style={{ height: `${ widthType == 2 ? "calc(50vh - 28px - 192px)" : "calc(100vh - 28px - 192px)" }` }}>
             <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
