@@ -9,7 +9,8 @@ const Technologies = ({ animationClass }: { animationClass: string }) => {
       <img className=" h-16 sm:h-24 mx-6 sm:mx-10" src="tailwindicon.svg" alt="" />
       <img className=" h-16 sm:h-24 mx-6 sm:mx-10" src="nodejs.png" alt="" />
       <img className=" h-16 sm:h-24 mx-6 sm:mx-10" src="graphql.png" alt="" />
-      <img className=" h-16 sm:h-24 m--6 sm:ml-10" src="socketio.png" alt="" />
+      <img className=" h-16 sm:h-24 mx-6 sm:mx-10" src="mysql.png" alt="" />
+      <img className=" h-16 sm:h-24 ml-6 sm:ml-10" src="socketio.png" alt="" />
     </div>
   )
 }

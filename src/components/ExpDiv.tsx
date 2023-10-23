@@ -60,7 +60,7 @@ const ExpDiv = (props: ExpProps) => {
           }}>
           </div>
         </a>
-        <div className={` ${props.widthType == 2 ? " pt-4" : ""} `}>
+        <div className={` ${props.widthType == 2 ? " pt-4" : ""}`}>
           {props.description}
           {props.githubLinks.map((link, index) => {
             return (
