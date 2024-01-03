@@ -50,10 +50,9 @@ const ExpDiv = (props: ExpProps) => {
     <div ref={ref} className={`${props.padding} ${show ? "exp-show": ""}`}>
       <h2 className=" text-xl md:text-2xl pb-2">{props.title}</h2>
       <div className={` grid ${props.widthType == 2 ? " grid-cols-1" : " grid-cols-2"}`}>
-        <a href={`${props.url}`} target="_blank" rel="noopener noreferrer" className=" w-fit">
-          <div className=" rounded bg-gray-700 shadow-lg" style={{ 
-            width: `${props.widthType == 2 ? `${width}px` : `${props.width}px`}`,
-            height: `${props.widthType == 2 ? width * (9/19) : props.width * (9/19)}px`,
+        <a href={`${props.url}`} target="_blank" rel="noopener noreferrer" className=" w-full md:w-fit">
+          <div className=" rounded bg-gray-700 shadow-lg w-full md:w-80" style={{ 
+            aspectRatio: "19/9",
             backgroundImage: `url(${props.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center"
