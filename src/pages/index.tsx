@@ -1,7 +1,6 @@
 import ExpDiv from "@/components/ExpDiv";
-import Technologies from "@/components/Technologies";
 import { params } from "@/utils/params";
-import { useScroll, motion } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -58,7 +57,7 @@ export default function Home() {
       <section className=" flex flex-col justify-between" style={{height: `calc(100vh - 128px)`}}>
         <div>
           <nav className=" flex justify-end pb-16">
-            <ul className=" flex text-lg">
+            <ul className=" flex md:text-lg">
               <li><a href="#technologies" className="mr-8">technologies</a></li>
               <li><a href="#portfolio" className="mr-8">portfolio</a></li>
               <li><a href="#aboutme">about me</a></li>
@@ -72,61 +71,34 @@ export default function Home() {
           <i className="fa-solid fa-chevron-down"></i>
         </a>
       </section>
-      <section ref={techRef} id="technologies" style={{ height: `calc(60vh - 64px)` }}>
+      <section ref={techRef} id="technologies" style={{ minHeight: `calc(60vh - 64px)` }}>
         <div className=" sticky top-0'">
           <div className=" pb-16 pt-16">
             <h4 className=" text-lg">technologies</h4>
           </div>
-
-          <div className=" flex whitespace-nowrap h-24 techAnimation overflow-x-hidden mb-16">
-            <Technologies animationClass="primary"/>
-            <Technologies animationClass="primary"/>
-          </div>
+          <div className="flex justify-center gap-x-8 gap-y-10 flex-wrap">
+            {["aws.png", "graphql.png", "javascript.png", "mysql.png", "nextjsicon.svg", "nodejs.png", "reactjs.png", "redux.png", "tailwindicon.svg", "typescript.png"].map((item, index) => {
+              return (
+                <img className=" h-16 md:h-20" src={item} alt={item.split(".")[0]} />
+              )
+            })}
+          </div>   
         </div>
       </section>
-      {/*
-      <section id="technologies" style={{ height: `calc(100vh - 64px)` }}>
-        <div className=" pb-16 pt-16">
-          <h4 className=" text-lg">technologies</h4>
-        </div>
-        
-        <div className=" grid grid-cols-4 grid-rows-6 gap-4" style={{ height: `calc(100vh - 28px - ${64 * 3}px)` }}>
-          <TechArticle color="#2A2C2E" image="reactjs.png" imageSize={params[widthType][2][0] as number} link="https://react.dev/" name="test" style={params[widthType][1][0] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-          <TechArticle color="black" image="nextjs.png" imageSize={params[widthType][2][0] as number} link="https://nextjs.org/" name="test" style={params[widthType][1][1] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }} />
-          <TechArticle color="#2E302C" image="javascript.png" imageSize={params[widthType][2][0] as number} link="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" name="test" style={params[widthType][1][2] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-          <TechArticle color="rgb(229 231 235)" image="typescript.png" imageSize={params[widthType][2][0] as number} link="https://www.typescriptlang.org/" name="test" style={params[widthType][1][3] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-          <TechArticle color="black" image="graphql.png" imageSize={params[widthType][2][0] as number} link="https://graphql.org/" name="test" style={params[widthType][1][4] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-          <TechArticle color="rgb(243 244 246)" image="nodejs.png" imageSize={params[widthType][2][0] as number} link="https://nodejs.org/en" name="test" style={params[widthType][1][5] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-          <TechArticle color="rgb(243 244 246)" image="tailwind.svg" imageSize={params[widthType][2][0] as number} link="https://tailwindcss.com" name="test" style={params[widthType][1][6] as { gridColumnStart: number; gridColumnEnd: number; gridRowStart: number; gridRowEnd: number; }}/>
-        </div>
-      </section>
-      */}
       <section id="portfolio" style={{ minHeight: `calc(100vh - 64px)` }}>
         <div className=" pb-16 pt-16">
           <h4 className=" text-lg">portfolio</h4>
         </div>
         <div>
-          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8 flex items-center`}>LightREF☀️<span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
-          <ExpDiv
-            title="LightREF"
-            description="LightREF is the place to effortlessly store your references. Simply drag and drop images or GIFs in your browser and access them from anywhere. I designed the project, integrate it with the server and
-            deployed it"
-            image="lightref.jpg"
-            width={params[widthType][0][0] as number}
-            padding="pb-28"
-            url="https://lightref.com/about"
-            tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
-            widthType={widthType}
-          />
-          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>Red Balloons Studios🎈 <span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Frontend Developer</span></h1>
+          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8`}>Red Balloons Studios🎈 <span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
           <ExpDiv
             title="Red Balloons Store"
-            description="Planned and Built this complete ecommerce"
-            image="redballoonsstore.jpg"
+            description="Reduced the number of API calls, resulting in a 20% savings in server costs. Integrated with AWS S3"
+            image="redballoonsstoremp.png"
             width={params[widthType][0][0] as number}
             padding="pb-16"
             url="https://redballoonsstore.shop"
-            tecImages={["nextjsicon.svg", "typescript.png", "nodejs.png", "graphql.png", "tailwindicon.svg"]}
+            tecImages={["nextjsicon.svg", "typescript.png", "nodejs.png", "graphql.png", "tailwindicon.svg", "aws.png"]}
             widthType={widthType}
           />
           <ExpDiv
@@ -134,9 +106,21 @@ export default function Home() {
             description="Built this responsive webpage for company arts showcase."
             image="redballoonsstudios.jpg"
             width={params[widthType][0][0] as number}
-            padding=""
+            padding="pb-28"
             url="https://redballoonsstudios.com"
             tecImages={["reactjs.png", "javascript.png", "nodejs.png"]}
+            widthType={widthType}
+          />
+          <h1 className={` ${widthType == 2 ? " text-2xl" : " text-4xl"} pb-8 flex items-center`}>LightREF☀️<span className={`${widthType == 2 ? " text-sm" : "text-base"}`}>as a Fullstack Developer</span></h1>
+          <ExpDiv
+            title="LightREF"
+            description="LightREF is the place to effortlessly store your references. Simply drag and drop images or GIFs in your browser and access them from anywhere. I designed the project, integrate it with the server and
+            deployed it"
+            image="lightref.jpg"
+            width={params[widthType][0][0] as number}
+            padding=""
+            url="https://lightref.com/about"
+            tecImages={["nextjsicon.svg", "nodejs.png", "tailwindicon.svg", "redux.png"]}
             widthType={widthType}
           />
         </div>
@@ -147,10 +131,10 @@ export default function Home() {
         </div>
         <div className={` grid justify-around items-center ${widthType == 2 ? " grid-cols-1 grid-rows-2" : " grid-cols-2 grid-rows-1"}`}>
           <div className="text-center">
-            Detail-oriented Front End Developer with 2 years of web development, specializing in creating dynamic, user-centric web experiences. Expertise includes React.js, Next.js, TypeScript, JavaScript (ES6+), Node.js, and GraphQL. Proficient in independent and collaborative projects, with a strong focus on landing page and website development.
+            Detail-oriented Fullstack Developer with 2 years of experience in web development, specializing in creating dynamic, user-centric web experiences. Skilled in React.js, Next.js, TypeScript, JavaScript (ES6+), Node.js, and GraphQL. Proficient in both independent and collaborative projects, with a strong focus on landing page and website development.
           </div>
           <div className=" flex justify-center items-center text-5xl" style={{ height: `${ widthType == 2 ? "calc(50vh - 28px - 192px)" : "calc(100vh - 28px - 192px)" }` }}>
-            <a href="https://www.linkedin.com/in/nícolas-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
+            <a href="https://www.linkedin.com/in/nicolas-fc-araujo" target="_blank" rel="noopener noreferrer" className=" mx-8 linkedin">
               <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://github.com/NicolasfcAraujo" target="_blank" rel="noopener noreferrer" className=" mx-8 github">

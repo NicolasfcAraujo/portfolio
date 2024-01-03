@@ -48,7 +48,7 @@ const ExpDiv = (props: ExpProps) => {
 
   return (
     <div ref={ref} className={`${props.padding} ${show ? "exp-show": ""}`}>
-      <h2 className=" text-2xl pb-2">{props.title}</h2>
+      <h2 className=" text-xl md:text-2xl pb-2">{props.title}</h2>
       <div className={` grid ${props.widthType == 2 ? " grid-cols-1" : " grid-cols-2"}`}>
         <a href={`${props.url}`} target="_blank" rel="noopener noreferrer" className=" w-fit">
           <div className=" rounded bg-gray-700 shadow-lg" style={{ 
