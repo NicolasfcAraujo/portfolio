@@ -79,7 +79,7 @@ export default function Home() {
           <div className="flex justify-center gap-x-8 gap-y-10 flex-wrap">
             {["aws.png", "graphql.png", "javascript.png", "mysql.png", "nextjsicon.svg", "nodejs.png", "reactjs.png", "redux.png", "tailwindicon.svg", "typescript.png"].map((item, index) => {
               return (
-                <img className=" h-16 md:h-20" src={item} alt={item.split(".")[0]} />
+                <img key={index} className=" h-16 md:h-20" src={item} alt={item.split(".")[0]} />
               )
             })}
           </div>   
